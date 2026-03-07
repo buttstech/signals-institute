@@ -1,0 +1,10 @@
+/* ========================================
+   The Signals Institute - Orange Page Theme
+   Background Color: #F59E0B (Amber/Orange)
+   Used for: transition, events (Veteran pillar & Riviera 27)
+   ======================================== */
+
+body .c-block,
+body .c-block-alt {
+  background-color: #F59E0B !important;
+}

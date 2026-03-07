@@ -1,0 +1,32 @@
+/* ========================================
+   AHL Font Configuration
+   Inter font for body text, Impact for headlines/animated letters
+   This file loads LAST to override all legacy font declarations
+   ======================================== */
+
+/* INTER FAMILY - All text including MISSION STEADY sections */
+body, .body,
+p, a, span, div,
+.paragraph, .paragraph-2, .p-txt,
+.link, .client-link, .button,
+.text-field, .submit-button-2,
+.category, label,
+.sm-menu-txt, .nav-link,
+.hero__right, .hero__right p,
+h1, .main,
+.letter-wrap h1,
+.lo-1, .lo-2, .lo-3, .lo-4, .lo-5, .lo-6,
+.lo-1-ap, .lo-2-ap, .lo-3-ap, .lo-4-ap, .lo-5-ap, .lo-6-ap,
+.ma-1, .ma-2, .ma-3, .ma-4, .ma-5, .ma-6,
+.ma-1-ap, .ma-2-ap, .ma-3-ap, .ma-4-ap, .ma-5-ap, .ma-6-ap,
+.to-1, .to-2, .to-3,
+h2, h3, h4, h5, h6,
+input, textarea, select {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* GOBOLD HIGH BOLD - Bubble navigation text
+   Separate standalone rule to override ahl-template.css multi-selector */
+div.tut-txt {
+  font-family: 'Gobold High Bold', sans-serif !important;
+}

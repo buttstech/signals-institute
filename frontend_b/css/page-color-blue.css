@@ -1,0 +1,10 @@
+/* ========================================
+   The Signals Institute - Blue Page Theme
+   Background Color: #00A8E8 (Electric Blue)
+   Used for: index, about, team, contact
+   ======================================== */
+
+body .c-block,
+body .c-block-alt {
+  background-color: #00A8E8 !important;
+}

@@ -1,0 +1,10 @@
+/* ========================================
+   The Signals Institute - Green Page Theme
+   Background Color: #22C55E (Green)
+   Used for: exposure, engagement (Youth & Community pillars)
+   ======================================== */
+
+body .c-block,
+body .c-block-alt {
+  background-color: #22C55E !important;
+}

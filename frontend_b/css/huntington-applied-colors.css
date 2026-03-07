@@ -1,0 +1,297 @@
+/* ========================================
+   Huntington Applied Brand Color Overrides
+   Applies to: huntington_applied.html ONLY
+
+   Color Palette:
+   - Dark: #222324 (Charcoal)
+   - Primary: #CC7351 (Terracotta/Orange)
+   - Secondary: #B6C2AE (Sage Green)
+   - Light: #F5F4EF (Cream)
+   - Accent: #5B7DA3 (Blue)
+   ======================================== */
+
+:root {
+  --huntington-color-dark: #222324;
+  --huntington-color-primary: #CC7351;
+  --huntington-color-secondary: #B6C2AE;
+  --huntington-color-light: #F5F4EF;
+  --huntington-color-accent: #5B7DA3;
+}
+
+/* ========================================
+   Body Background
+   Override: #007641 → #222324 (Huntington Dark)
+   ======================================== */
+
+.body {
+  background-color: var(--huntington-color-dark) !important;
+}
+
+/* ========================================
+   Side Panel Backgrounds
+   Override: #20275a → #222324 (Huntington Dark)
+   ======================================== */
+
+body .side-panel,
+body .side-panel-alt {
+  background-color: var(--huntington-color-dark) !important;
+}
+
+/* ========================================
+   Section Backgrounds
+   Override: #20275a → #222324 (Huntington Dark)
+   ======================================== */
+
+body .section {
+  background-color: var(--huntington-color-dark) !important;
+}
+
+/* ========================================
+   Green Backgrounds → Huntington Orange (Primary/Accent Areas)
+   Override: #007640, #007641 → #CC7351 (Terracotta)
+   Note: Buttons use original template styling (dark grey)
+   ======================================== */
+
+body [style*="background-color: #007640"],
+body [style*="background-color: #007641"],
+body [style*="background-color:#007640"],
+body [style*="background-color:#007641"] {
+  background-color: var(--huntington-color-primary) !important;
+}
+
+/* Dark green backgrounds stay dark (Huntington charcoal) */
+body [style*="background-color: #00361e"],
+body [style*="background-color: #004626"],
+body [style*="background-color:#00361e"],
+body [style*="background-color:#004626"] {
+  background-color: var(--huntington-color-dark) !important;
+}
+
+/* Buttons use original template styling */
+body .button,
+body .w-button {
+  background-color: #292929 !important;
+}
+
+body .button:hover,
+body .w-button:hover {
+  background-color: #313131 !important;
+  box-shadow: 0 3px 3px 1px #874d38 !important;
+  color: #fff2cb !important;
+}
+
+/* Border colors → Huntington Sage */
+body .w-button,
+body [style*="border-color: #004626"],
+body [style*="border-color:#004626"] {
+  border-color: var(--huntington-color-secondary) !important;
+}
+
+/* ========================================
+   Text Colors
+   Override: #fff2cb → #F5F4EF (Huntington Cream)
+   ======================================== */
+
+body .main {
+  color: var(--huntington-color-light) !important;
+}
+
+body .link {
+  color: var(--huntington-color-light) !important;
+}
+
+body .paragraph,
+body p {
+  color: var(--huntington-color-light);
+}
+
+/* ========================================
+   Link Hover States
+   Override: #e8b521 → #B6C2AE (Huntington Sage)
+   ======================================== */
+
+body .link:hover {
+  color: var(--huntington-color-secondary) !important;
+}
+
+body .link-block-2:hover {
+  background-color: var(--huntington-color-secondary) !important;
+}
+
+/* ========================================
+   Responsive Overrides - Match Template Media Queries
+   ======================================== */
+
+@media screen and (max-width: 991px) {
+  body .side-panel,
+  body .side-panel-alt {
+    background-color: var(--huntington-color-dark) !important;
+  }
+
+  body .section,
+  body .section.section-extension {
+    background-color: var(--huntington-color-dark) !important;
+  }
+
+  body .content-wrap {
+    background-color: var(--huntington-color-primary) !important;
+  }
+
+  body .body {
+    background-color: var(--huntington-color-dark) !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body .side-panel,
+  body .side-panel-alt {
+    background-color: var(--huntington-color-dark) !important;
+  }
+
+  body .main {
+    color: var(--huntington-color-light) !important;
+  }
+
+  body .section,
+  body .section.section-extension {
+    background-color: var(--huntington-color-dark) !important;
+  }
+
+  body .content-wrap {
+    background-color: var(--huntington-color-primary) !important;
+  }
+
+  body .submit-button-2 {
+    background-color: var(--huntington-color-primary) !important;
+  }
+
+  body .submit-button-2:hover {
+    background-color: var(--huntington-color-accent) !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body .side-panel,
+  body .side-panel-alt {
+    background-color: var(--huntington-color-dark) !important;
+  }
+
+  body .section,
+  body .section.section-extension {
+    background-color: var(--huntington-color-dark) !important;
+  }
+
+  body .content-wrap {
+    background-color: var(--huntington-color-primary) !important;
+  }
+
+  body .submit-button-2 {
+    background-color: var(--huntington-color-primary) !important;
+  }
+
+  body .submit-button-2:hover {
+    background-color: var(--huntington-color-accent) !important;
+  }
+
+  /* Mobile font size - Override line 7 (h1) in template */
+  .letter-wrap h1,
+  body .letter-wrap h1,
+  .letter-wrap-n h1,
+  body .letter-wrap-n h1 {
+    font-size: 9vw !important;
+  }
+}
+
+/* ========================================
+   Additional Element Overrides
+   ======================================== */
+
+/* Tutorial/Contact button */
+body .tut-inner {
+  background-color: var(--huntington-color-dark) !important;
+}
+
+/* Link blocks */
+body .link-block {
+  background-color: var(--huntington-color-dark) !important;
+}
+
+/* Text colors in side panel */
+body .side-panel .main,
+body .side-panel-alt .main {
+  color: var(--huntington-color-light) !important;
+}
+
+body .side-panel .paragraph,
+body .side-panel-alt .paragraph {
+  color: var(--huntington-color-light) !important;
+}
+
+/* ========================================
+   Huntington Applied Specific Elements
+   ======================================== */
+
+/* Content area accents */
+body .content-wrap h2,
+body .content-wrap-alt h2 {
+  color: var(--huntington-color-primary);
+}
+
+/* Secondary accents */
+body .content-wrap h3,
+body .content-wrap-alt h3 {
+  color: var(--huntington-color-secondary);
+}
+
+/* Category tags/badges */
+body .category {
+  background-color: var(--huntington-color-secondary) !important;
+}
+
+/* Submit buttons */
+body .submit-button-2 {
+  background-color: var(--huntington-color-primary) !important;
+  border-color: var(--huntington-color-primary) !important;
+}
+
+body .submit-button-2:hover {
+  background-color: var(--huntington-color-accent) !important;
+}
+
+/* Additional paragraphs */
+body .paragraph-2 {
+  color: var(--huntington-color-light) !important;
+}
+
+/* ========================================
+   Additional Class-Specific Overrides
+   ======================================== */
+
+/* P-txt elements */
+body .p-txt {
+  color: var(--huntington-color-light) !important;
+}
+
+/* C-block elements */
+body .c-block {
+  background-color: var(--huntington-color-primary) !important;
+}
+
+/* Div-block-52 elements */
+body .div-block-52 {
+  border-color: var(--huntington-color-secondary) !important;
+}
+
+/* Submit button box-shadow override */
+body .submit-button-2:hover {
+  box-shadow: 0 3px 3px 0 var(--huntington-color-dark) !important;
+}
+
+/* Content-wrap-alt elements - Match sidepanel color */
+.content-wrap-alt {
+  background-color: var(--huntington-color-dark) !important;
+}
+
+body .content-wrap-alt {
+  background-color: var(--huntington-color-dark) !important;
+}

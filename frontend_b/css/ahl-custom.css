@@ -1,0 +1,271 @@
+/* Anne Huntington Laboratory Custom Styles */
+
+/* ========================================
+   TYPOGRAPHY SYSTEM
+   Source: ~/ahl/docs/design/assets/AHL_PROJECT_AESTHETICS_REFERENCE_SIMPLE.csv
+   ========================================
+
+   AHL Brand:
+   - Primary Font: Playfair Display (headlines only)
+   - Secondary Font: Inter (body, navigation, organization name)
+
+   Huntington Brand:
+   - Primary Font: Playfair Display (headlines only)
+   - Secondary Font: Work Sans (body, navigation, organization name)
+
+   CRITICAL: Organization names use SECONDARY fonts:
+   - "Anne Huntington Laboratory" → Inter
+   - "Huntington Applied" → Work Sans (on Lab/Research pages)
+   ======================================== */
+
+/* ========================================
+   AHL Color Variables
+   Source: ~/ahl/docs/design/assets/AHL_PROJECT_AESTHETICS_REFERENCE_SIMPLE.csv
+   ======================================== */
+:root {
+  /* Anne Huntington Laboratory (AHL) */
+  --ahl-primary: #c27b7f;      /* Rose/Mauve */
+  --ahl-secondary: #8fa890;    /* Sage Green */
+  --ahl-dark: #1a1a1a;         /* Near Black */
+  --ahl-light: #f5f5f5;        /* Off White */
+  --ahl-accent: #6b8db5;       /* Steel Blue */
+
+  /* Huntington Applied LLC (Huntington) */
+  --huntington-dark: #222324;     /* Charcoal */
+  --huntington-primary: #CC7351;  /* Terracotta */
+  --huntington-light: #F5F4EF;    /* Cream */
+  --huntington-secondary: #B6C2AE;/* Sage */
+  --huntington-accent: #5B7DA3;   /* Blue */
+}
+
+/* ========================================
+   Organization Name Typography
+   Use these classes for organization names in body text
+   ======================================== */
+
+/* Anne Huntington Laboratory name - uses Inter (AHL secondary font) */
+.org-name-ahl {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Huntington Applied name - uses Work Sans (Huntington secondary font) */
+.org-name-huntington {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ========================================
+   Research Page Specific Styles
+   ======================================== */
+
+/* Dual navigation for Research page */
+.research-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.research-nav-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ahl-accent);
+  margin-bottom: 15px;
+}
+
+.research-nav-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.research-nav-section li {
+  margin: 10px 0;
+  float: none;
+  padding: 0;
+}
+
+.research-nav-section a {
+  font-size: 14px;
+  color: var(--ahl-dark);
+}
+
+/* Project cards for Research page */
+.project-category {
+  margin-bottom: 50px;
+}
+
+.project-category h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--ahl-primary);
+  font-size: 2em;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--ahl-secondary);
+  padding-bottom: 10px;
+}
+
+.project-card {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.project-card:last-child {
+  border-bottom: none;
+}
+
+.project-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.3em;
+  color: var(--ahl-dark);
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.project-card p {
+  margin: 0;
+  color: #666;
+}
+
+.project-logo {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Huntington Applied logo on lab page - increased size */
+.content-area-inverted .logo-container img,
+.content-area-inverted > div:first-child img {
+  max-width: 600px;
+  height: auto;
+}
+
+/* Text placeholder for projects without logos */
+.project-placeholder {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--ahl-light);
+  border: 2px solid var(--ahl-secondary);
+  color: var(--ahl-dark);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* ========================================
+   Huntington Applied Branding Override
+   Apply to lab.html and research.html
+   ======================================== */
+
+/* Body-level class to apply Huntington branding */
+body.huntington-branding {
+  font-family: 'Work Sans', sans-serif;
+}
+
+body.huntington-branding h1,
+body.huntington-branding h2,
+body.huntington-branding h3,
+body.huntington-branding .side-panel-inverted h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Huntington color overrides */
+body.huntington-branding .side-panel-inverted {
+  background-color: var(--huntington-light);
+}
+
+body.huntington-branding .side-panel-inverted nav a {
+  color: var(--huntington-dark);
+}
+
+body.huntington-branding .side-panel-inverted nav a:hover {
+  color: var(--huntington-primary);
+}
+
+body.huntington-branding .research-nav-section h3 {
+  color: var(--huntington-accent);
+}
+
+body.huntington-branding .research-nav-section a {
+  color: var(--huntington-dark);
+}
+
+body.huntington-branding .content-area-inverted h1,
+body.huntington-branding .content-area-inverted h2 {
+  color: var(--huntington-dark);
+}
+
+body.huntington-branding .content-area-inverted h3 {
+  color: var(--huntington-primary);
+}
+
+body.huntington-branding .content-area-inverted p,
+body.huntington-branding .content-area-inverted ul {
+  color: var(--huntington-dark);
+}
+
+body.huntington-branding .content-area-inverted a {
+  color: var(--huntington-accent);
+}
+
+body.huntington-branding .content-area-inverted a:hover {
+  color: var(--huntington-primary);
+}
+
+body.huntington-branding .project-category h2 {
+  color: var(--huntington-primary);
+  border-bottom-color: var(--huntington-secondary);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media screen and (max-width: 991px) {
+  .side-panel-inverted {
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .content-area-inverted {
+    width: 100%;
+    margin-right: 0;
+    padding: 40px 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content-area-inverted h1 {
+    font-size: 2em;
+  }
+
+  .content-area-inverted h2 {
+    font-size: 1.5em;
+  }
+
+  .page-text {
+    padding: 5%;
+  }
+}
+
+/* ========================================
+   Logo Icon Sizing
+   For pages using icon instead of landscape logo
+   ======================================== */
+
+.logo-icon .image {
+  width: 80% !important;
+}
+
+@media screen and (max-width: 479px) {
+  .logo-icon .image {
+    width: 30% !important;
+  }
+}

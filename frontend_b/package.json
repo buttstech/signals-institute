@@ -1,0 +1,31 @@
+{
+  "name": "annehuntingtonlaboratory-frontend",
+  "version": "1.0.0",
+  "description": "Anne Huntington Laboratory Corporate Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development nodemon server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "anne-huntington-laboratory",
+    "corporate-website",
+    "static-site"
+  ],
+  "author": "Anne Huntington Laboratory",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "sharp": "^0.34.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
